@@ -23,22 +23,53 @@ uv run pytest
 └── CHANGELOG.md         # managed by release-please
 ```
 
-## Development
+## Development tooling
+
+The template ships with an opinionated, modern Python toolchain — all
+configured in `pyproject.toml` (no scattered config files).
+
+| Tool | Purpose | Where it runs |
+|---|---|---|
+| [**uv**](https://docs.astral.sh/uv/) | Package manager, virtualenv handler, Python installer, build tool. Replaces `pip` + `venv` + `pip-tools` + `pyenv`. | Local + CI |
+| [**ruff**](https://docs.astral.sh/ruff/) | Linter + formatter (replaces flake8, isort, black, pyupgrade). | pre-commit + CI lint job |
+| [**ty**](https://github.com/astral-sh/ty) | Static type checker by Astral (faster mypy alternative). | CI lint job + `tox -e type` |
+| [**pytest**](https://docs.pytest.org/) | Test runner. | Local + CI test matrix |
+| [**pytest-cov**](https://pytest-cov.readthedocs.io/) | Coverage reporting via `coverage.py`. | On-demand (`pytest --cov`) |
+| [**tox**](https://tox.wiki/) + [**tox-uv**](https://github.com/tox-dev/tox-uv) | Isolated test environments per Python version (3.11, 3.12, 3.13) backed by uv for speed. | Local + CI test matrix |
+| [**pre-commit**](https://pre-commit.com/) | Git hook framework — runs ruff and conventional-commit checks before every commit. | Local |
+| [**conventional-pre-commit**](https://github.com/compilerla/conventional-pre-commit) | Pure-Python validator for [Conventional Commits](https://www.conventionalcommits.org/) commit messages. | pre-commit (commit-msg stage) |
+| [**commitlint**](https://commitlint.js.org/) | Node-based validator that re-checks every commit on a PR. | CI `commitlint` job |
+| [**hatchling**](https://hatch.pypa.io/) | PEP 517 build backend used by `uv build` to produce wheel/sdist. | Build / publish |
+| [**release-please**](https://github.com/googleapis/release-please) | Parses Conventional Commits → bumps version → updates CHANGELOG → tags releases. | CI on push to `main` |
+| [**claude-code-action**](https://github.com/anthropics/claude-code-action) | Claude reviews PRs on demand when you comment `@claude`. | CI on PR comment |
+| [**Dependabot**](https://docs.github.com/en/code-security/dependabot) | Weekly grouped PRs updating GitHub Actions and uv dev-dependencies. | GitHub native |
+
+## Development commands
 
 ```bash
-# Install hooks (runs ruff + ty pre-commit, conventional commit-msg)
+# Install all dev deps + create .venv
+uv sync --group dev
+
+# Install hooks (runs ruff and conventional commit-msg validation)
 uv run pre-commit install --hook-type pre-commit --hook-type commit-msg
 
-# Run the full test matrix (3.11, 3.12, 3.13)
+# Full test matrix (3.11, 3.12, 3.13) — tox spawns isolated uv envs per version
 uv run tox
 
-# Single env
-uv run tox -e py313 -- -k calculator
+# Single env (fastest iteration)
+uv run tox -e py313 -- -k calculator   # only tests matching "calculator"
 
-# Lint / format check / type check
+# Lint / format / type check (one-off, without tox)
 uv run ruff check .
 uv run ruff format --check .
 uv run ty check src
+
+# Build the distribution locally
+uv build
+
+# Add a new dependency (auto-updates uv.lock — commit both files)
+uv add httpx
+uv add --group dev pytest-mock
 ```
 
 ## Commits
