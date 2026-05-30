@@ -1,6 +1,6 @@
 import pytest
 
-from test_python_package_release import add, divide, multiply, subtract
+from test_python_package_release import add, divide, multiply, power, subtract
 
 
 def test_add():
@@ -22,3 +22,15 @@ def test_divide():
 def test_divide_by_zero():
     with pytest.raises(ZeroDivisionError):
         divide(1, 0)
+
+
+def test_power():
+    assert power(2, 10) == 1024
+
+
+def test_power_zero_exponent():
+    assert power(5, 0) == 1
+
+
+def test_power_negative_exponent():
+    assert power(2, -2) == 0.25
