@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.1](https://github.com/wozniakos10/test_python_package_release/compare/test-python-package-release-v0.3.0...test-python-package-release-v0.3.1) (2026-05-30)
+
+
+### Bug Fixes
+
+* **ci:** auto-sync uv.lock + improve setup docs ([a899a19](https://github.com/wozniakos10/test_python_package_release/commit/a899a1968b91039b189885c840c072a5eb7ac7ff))
+* **ci:** auto-sync uv.lock in release PR ([3ad6c92](https://github.com/wozniakos10/test_python_package_release/commit/3ad6c9268eab5ff5a6bbbbb7694cae9cdbf1898b))
+
+
+### Documentation
+
+* clarify first-time template setup steps ([9ffe772](https://github.com/wozniakos10/test_python_package_release/commit/9ffe7729e9987a09285ae01caf534bbbefa53bd4))
+
 ## [0.3.0](https://github.com/wozniakos10/test_python_package_release/compare/test-python-package-release-v0.2.0...test-python-package-release-v0.3.0) (2026-05-30)
 
 
