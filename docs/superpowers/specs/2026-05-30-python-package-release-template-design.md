@@ -232,7 +232,7 @@ Two ecosystems, weekly schedule, grouped PRs:
 | 7 | OIDC / Trusted Publishing | No long-lived tokens to leak |
 | 8 | Claude review on `@claude` only | Less noise than auto-review; explicit opt-in |
 | 9 | Merge commits + per-commit conventional | Granular history for release-please parsing |
-| 10 | commitlint CI + conventional-pre-commit local | Pure-Python local hook (no Node lokalnie), Node-based commitlint in CI for full validation |
+| 10 | commitlint CI + conventional-pre-commit local | Pure-Python local hook (no Node required locally), Node-based commitlint in CI for full validation |
 | 11 | Single `pyproject.toml` (incl. tox config) | One file to edit, fewer config sprawl |
 | 12 | `hatchling` build backend | Lightweight, plays well with `uv build` |
 | 13 | MIT license + Dependabot (actions + uv, grouped weekly) | Standard OSS defaults |
