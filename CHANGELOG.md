@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0](https://github.com/wozniakos10/test_python_package_release/compare/test-python-package-release-v0.2.0...test-python-package-release-v0.3.0) (2026-05-30)
+
+
+### Features
+
+* **calculator:** add power function ([7aa416e](https://github.com/wozniakos10/test_python_package_release/commit/7aa416e69a4c9740a5efd759cbc01edcf769a222))
+* **calculator:** add power function ([db468cc](https://github.com/wozniakos10/test_python_package_release/commit/db468ccbeea74f04cd77ca3b7899fdba6f50f595))
+
+
+### Bug Fixes
+
+* **ci:** rename commitlint config to .cjs for CommonJS loading ([75c9ddf](https://github.com/wozniakos10/test_python_package_release/commit/75c9ddf52c324fae0854efecbc543ce4d13da136))
+
 ## [0.2.0](https://github.com/wozniakos10/test_python_package_release/compare/test-python-package-release-v0.1.0...test-python-package-release-v0.2.0) (2026-05-30)
 
 
