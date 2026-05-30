@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/wozniakos10/test_python_package_release/compare/test-python-package-release-v0.3.1...test-python-package-release-v0.3.2) (2026-05-30)
+
+
+### Documentation
+
+* add development tooling table to README ([41a3e31](https://github.com/wozniakos10/test_python_package_release/commit/41a3e31ba0dfcec3da01b1bb1d5d9c5ad06c4f74))
+* add development tooling table to README ([d112e33](https://github.com/wozniakos10/test_python_package_release/commit/d112e333ef4b51e03c5b5cfdcf8725c21a2e1345))
+
 ## [0.3.1](https://github.com/wozniakos10/test_python_package_release/compare/test-python-package-release-v0.3.0...test-python-package-release-v0.3.1) (2026-05-30)
 
 
