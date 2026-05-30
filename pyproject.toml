@@ -1,6 +1,6 @@
 [project]
 name = "test-python-package-release"
-version = "0.1.0"
+version = "0.2.0"
 description = "Template library demonstrating Python package release CI/CD"
 readme = "README.md"
 requires-python = ">=3.11"
