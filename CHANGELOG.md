@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.4.0](https://github.com/wozniakos10/test_python_package_release/compare/test-python-package-release-v0.3.2...test-python-package-release-v0.4.0) (2026-05-31)
+
+
+### Features
+
+* **calculator:** add modulo, sqrt, and is_divisible functions ([5c5d4b1](https://github.com/wozniakos10/test_python_package_release/commit/5c5d4b14d72f9d2cfebe515a52d1f02e22f2dfcf))
+* **calculator:** add modulo, sqrt, and is_divisible functions ([6f0e60a](https://github.com/wozniakos10/test_python_package_release/commit/6f0e60a8e6c95eaf755a2e225ecab4e9b6d4f5e6))
+* **strings:** add count_words, camel_to_snake, and truncate functions ([ce969a5](https://github.com/wozniakos10/test_python_package_release/commit/ce969a5bdc25d59ba805ed79bccb000e84d64bcf))
+* **strings:** add count_words, camel_to_snake, and truncate functions ([9600b2c](https://github.com/wozniakos10/test_python_package_release/commit/9600b2c6171d93ce77e4b5929f05422b924dd7ba))
+
+
+### Bug Fixes
+
+* **init:** resolve duplicate imports after calculator-extras merge ([5313c13](https://github.com/wozniakos10/test_python_package_release/commit/5313c130f0918733aae5a8e34fc55ab86fe1c54d))
+
 ## [0.3.2](https://github.com/wozniakos10/test_python_package_release/compare/test-python-package-release-v0.3.1...test-python-package-release-v0.3.2) (2026-05-30)
 
 

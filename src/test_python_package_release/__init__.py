@@ -1,6 +1,6 @@
 """Test Python package release — template library."""
 
-__version__ = "0.3.2"  # managed by release-please
+__version__ = "0.4.0"  # managed by release-please
 
 from test_python_package_release.calculator import (
     add,
